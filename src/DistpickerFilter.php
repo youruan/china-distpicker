@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\ChinaDistpicker;
+namespace Youruan\LaravelAdminChinaDistpicker;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Grid\Filter\AbstractFilter;

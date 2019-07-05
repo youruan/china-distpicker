@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\ChinaDistpicker;
+namespace Youruan\LaravelAdminChinaDistpicker;
 
 use Encore\Admin\Form\Field;
 use Illuminate\Support\Arr;
@@ -47,6 +47,30 @@ class Distpicker extends Field
         $this->label = empty($arguments) ? '地区选择' : current($arguments);
     }
 
+    public function getValidator(array $input)
+    {
+        if ($this->validator) {
+            return $this->validator->call($this, $input);
+        }
+
+        $rules = $attributes = [];
+
+        if (!$fieldRules = $this->getRules()) {
+            return false;
+        }
+
+        foreach ($this->column as $key => $column) {
+            if (!Arr::has($input, $column)) {
+                continue;
+            }
+            $input[$column] = Arr::get($input, $column);
+            $rules[$column] = $fieldRules;
+            $attributes[$column] = $this->label."[$column]";
+        }
+
+        return \validator($input, $rules, $this->getValidationMessages(), $attributes);
+    }
+
     /**
      * @param int $count
      * @return $this
@@ -61,7 +85,7 @@ class Distpicker extends Field
      */
     public function render()
     {
-        $this->attribute('data-value-type', 'code');
+        $this->attribute('data-value-type', 'name');
 
         $province = old($this->column['province'], Arr::get($this->value(), 'province')) ?: Arr::get($this->placeholder, 'province');
         $city     = old($this->column['city'],     Arr::get($this->value(), 'city'))     ?: Arr::get($this->placeholder, 'city');
