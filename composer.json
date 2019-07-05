@@ -1,9 +1,9 @@
 {
-    "name": "laravel-admin-ext/china-distpicker",
-    "description": "Distpicker extension for laravel-admin",
+    "name": "youruan/laravel-admin-china-distpicker",
+    "description": "Distpicker extension for laravel-admin fork from laravel-admin-ext/china-distpicker",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "distpicker"],
-    "homepage": "https://github.com/laravel-admin-ext/china-distpicker",
+    "homepage": "https://github.com/youruan/china-distpicker",
     "license": "MIT",
     "authors": [
         {
@@ -26,7 +26,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Encore\\ChinaDistpicker\\ChinaDistpickerServiceProvider"
+                "Youruan\\ChinaDistpicker\\ChinaDistpickerServiceProvider"
             ]
 
         }

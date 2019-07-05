@@ -1,20 +1,20 @@
 <?php
 
-namespace Encore\ChinaDistpicker;
+namespace Youruan\LaravelAdminChinaDistpicker;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Grid\Filter;
 use Illuminate\Support\ServiceProvider;
 
-class ChinaDistpickerServiceProvider extends ServiceProvider
+class LaravelAdminChinaDistpickerServiceProvider extends ServiceProvider
 {
     /**
      * {@inheritdoc}
      */
-    public function boot(ChinaDistpicker $extension)
+    public function boot(LaravelAdminChinaDistpicker $extension)
     {
-        if (! ChinaDistpicker::boot()) {
+        if (! LaravelAdminChinaDistpicker::boot()) {
             return ;
         }
 
