@@ -4,7 +4,7 @@ namespace Youruan\LaravelAdminChinaDistpicker;
 
 use Encore\Admin\Extension;
 
-class LaravelAdminChinaDistpicker extends Extension
+class ChinaDistpicker extends Extension
 {
     public $name = 'china-distpicker';
 

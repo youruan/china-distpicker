@@ -7,14 +7,14 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid\Filter;
 use Illuminate\Support\ServiceProvider;
 
-class LaravelAdminChinaDistpickerServiceProvider extends ServiceProvider
+class ChinaDistpickerServiceProvider extends ServiceProvider
 {
     /**
      * {@inheritdoc}
      */
-    public function boot(LaravelAdminChinaDistpicker $extension)
+    public function boot(ChinaDistpicker $extension)
     {
-        if (! LaravelAdminChinaDistpicker::boot()) {
+        if (! ChinaDistpicker::boot()) {
             return ;
         }
 
