@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\ChinaDistpicker\\": "src/"
+            "Youruan\\LaravelAdminChinaDistpicker\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Youruan\\LavelAdminChinaDistpicker\\ChinaDistpickerServiceProvider"
+                "Youruan\\LaravelAdminChinaDistpicker\\ChinaDistpickerServiceProvider"
             ]
 
         }
